@@ -1,0 +1,32 @@
+// FOOTER: menu
+// -------------------------------------------------------- */
+
+.footer-menu {
+  display: inline-block;
+
+  &:nth-child(1) {
+    margin-left: px(115px, 'fhd');
+  }
+
+  &:nth-child(2) {
+    margin-left: px(148px, 'fhd');
+  }
+}
+
+.footer-menu-link {
+  display: block;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: px(16px, 'fhd');
+  line-height: 3.5em; // 56px
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $black;
+
+  &:hover {
+    color: $yellow;
+  }
+}

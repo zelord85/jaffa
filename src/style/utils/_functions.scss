@@ -1,0 +1,25 @@
+// RESPONSIVE
+// ===============================================
+
+@function px($target, $mq) {
+
+  @if $mq == 'fhd' {
+    $vw-context: (1920 * .01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+  } @else if $mq == 'xxl' {
+    $vw-context: (1680 * .01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+  } @else if $mq == 'xl' {
+    $vw-context: (1440 * .01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+  } @else if $mq == 'lg' {
+    $vw-context: (1366 * .01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+  } @else if $mq == 'md' {
+    $vw-context: (1280 * .01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+  } @else if $mq == 'sm' {
+    $vw-context: (1024 * .01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+  }
+}

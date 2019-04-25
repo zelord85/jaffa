@@ -1,0 +1,40 @@
+// SECTION PROMO
+// ---------------------------------------------------------- */
+
+.section-promo {
+  height: px(790px, 'fhd');
+  background-image: url('../images/media/background-promo.jpg');
+  background-size: 105%;
+  background-position: left 0px top px(-20px, 'fhd');
+  background-repeat: no-repeat;
+
+  margin-top: px(64px, 'fhd');
+  box-sizing: border-box;
+
+  .widget-promo {
+    display: table;
+    width: 50%;
+    height: px(790px, 'fhd');
+    transform: translateX(-15%);
+  }
+
+  .caption,
+  .image-wrap {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .promo-image {
+    width: px(319px, 'fhd');
+    transform: rotate(-3.52deg) translate(15%, 4%);
+  }
+
+  .slogan {
+    display: inline-block;
+    width: px(316px, 'fhd');
+    color: $white;
+    margin: px(60px, 'fhd') px(4px, 'fhd');
+
+    transform: rotate(-4.1deg);
+  }
+}

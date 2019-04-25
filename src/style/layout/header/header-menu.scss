@@ -1,0 +1,300 @@
+$animaionTimeOpen: 0.6s;
+$animaionTimeClose: 0.3s;
+
+@keyframes hamburgerTopLineClose {
+
+  from {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%) rotate(0deg);
+  }
+}
+
+@keyframes hamburgerMiddleLineClose {
+
+  from {
+    display: block;
+  }
+  50% {
+    display: block;
+  }
+  to {
+    display: none;
+  }
+}
+
+@keyframes hamburgerBottomLineClose {
+
+  from {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+}
+
+@keyframes hamburgerTopLineOpen {
+
+  from {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@keyframes hamburgerMiddleLineOpen {
+
+  from {
+    display: block;
+  }
+  50% {
+    display: block;
+  }
+  to {
+    display: none;
+  }
+}
+
+@keyframes hamburgerBottomLineOpen {
+
+  from {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@keyframes menuOpen {
+
+  from {
+    display: none;
+    opacity: 0;
+    top: 30px;
+  }
+
+  to {
+    display: block;
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes menuClose {
+
+  from {
+    display: block;
+    opacity: 1;
+    top: 0px;
+  }
+
+  to {
+    display: none;
+    opacity: 0;
+    top: 30px;
+  }
+}
+
+.widget-menu {
+  position: absolute;
+  top: px(50px, 'fhd');
+  right: px(20px, 'fhd');
+  transform: translateY(-50%);
+
+  &:hover  .menu-icon {
+    cursor: pointer;
+
+    .line:nth-child(1) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+
+      animation-duration: animaionTimeOpen;
+      animation-name: hamburgerTopLineOpen;
+    }
+
+    .line:nth-child(2) {
+      display: none;
+      top: 50%;
+      transform: translateY(-50%);
+
+      animation-duration: $animaionTimeOpen;
+      animation-name: hamburgerMiddleLineOpen;
+    }
+
+    .line:nth-child(3) { 
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+
+      animation-duration: animaionTimeOpen;
+      animation-name: hamburgerBottomLineOpen;
+    }
+  }
+
+  .menu-icon {
+    display: block;
+    width: px(35px, 'fhd');
+    height: px(30px, 'fhd');
+    position: relative;
+    z-index: 100;
+  }
+
+  .line {
+    display: block;
+    width: 100%;
+    border-top: 1px solid $white;
+    border-top: 2px solid $white;
+    border-radius: 2px;
+    box-sizing: border-box;
+    position: absolute;
+    transform-origin: 50% 50%;
+
+    &:nth-child(1) {
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, 0%) rotate(0deg);
+
+      animation-duration: $animaionTimeClose;
+      animation-name: hamburgerTopLineClose;
+    }
+
+    &:nth-child(2) {
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      animation-duration: $animaionTimeClose;
+      animation-name: hamburgerMiddleLineClose;
+    }
+
+    &:nth-child(3) {
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -100%) rotate(0deg);
+
+      animation-duration: $animaionTimeClose;
+      animation-name: hamburgerBottomLineClose;
+    }
+  }
+
+  .menu-dropdown {
+    position: inherit;
+    display: none;
+    top: 30px;
+    opacity: 0;
+    right: -28px;
+
+    animation-duration: .3s;
+    animation-name: menuClose;
+
+    .menu-list {
+      position: relative;
+      width: 300px;
+      padding: 25px 15px 25px;
+      box-sizing: border-box;
+      margin-top: 66px;
+      border: 2px solid $white;
+      background-color: $yellow;
+      text-align: right;
+      list-style: none;
+
+      &:before {
+        display: block;
+        position: absolute;
+        top: -30px;
+        right: 26px;
+        z-index: 1;
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 30px solid $white;
+      }
+
+      &:after {
+        display: block;
+        position: absolute;
+        top: -26px;
+        right: 29px;
+        z-index: 2;
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 26px solid $yellow;
+      }
+    }
+
+    .menu-link {
+      font-family: Roboto;
+      font-style: italic;
+      font-weight: 900;
+      font-size: px(24px, 'fhd');
+      line-height: px(34px, 'fhd');
+      text-align: right;
+      text-transform: uppercase;
+      color: $white;
+      text-decoration: none;
+
+      @include xxlarge {
+        font-size: px(24px, 'xxl');
+        line-height: px(34px, 'xxl');
+      }
+
+      @include xlarge {
+        font-size: px(24px, 'xl');
+        line-height: px(34px, 'xl');
+      }
+    }
+
+    @at-root .header .widget-menu:hover .menu-dropdown {
+      display: block;
+      opacity: 1;
+      top: 0px;
+      animation-duration: .3s;
+      animation-name: menuOpen;
+    }
+  }
+}

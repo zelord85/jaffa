@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: px(273px, 'fhd');
+  height: px(62px, 'fhd');
+  box-sizing: border-box;
+  border-radius: px(40px, 'xl');
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: px(24px, 'fhd');
+  line-height: px(62px, 'fhd');
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &.button--yellow {
+    color: $white;
+    border: px(3px, 'xl') solid $yellow;
+    background-color: $yellow;
+  }
+
+  &.button--outline {
+    color: $white;
+    border: px(3px, 'xl') solid $white;
+    background-color: transparent;
+  }
+}

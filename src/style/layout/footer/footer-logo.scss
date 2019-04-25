@@ -1,0 +1,19 @@
+// FOOTER: logo
+// -------------------------------------------------------- */
+
+.footer-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-2%, -63%);
+
+  .logo-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .logo-image {
+    width: px(120px, 'fhd');
+    height: auto;
+  }
+}

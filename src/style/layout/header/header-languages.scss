@@ -1,0 +1,162 @@
+@keyframes langMenuOpen {
+
+  from {
+    display: none;
+    opacity: 0;
+    top: 50px;
+  }
+
+  to {
+    display: block;
+    opacity: 1;
+    top: 30px;
+  }
+}
+
+@keyframes langMenuClose {
+
+  from {
+    display: block;
+    opacity: 1;
+    top: 30px;
+  }
+
+  to {
+    display: none;
+    opacity: 0;
+    top: 50px;
+  }
+
+  75% {
+    display: block;
+  }
+}
+
+.widget-lang {
+  position: absolute;
+  top: px(26px, 'fhd');
+  left: 0;
+
+  .lang-link {
+    position: relative;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: px(16px, 'fhd');
+    line-height: normal;
+    text-transform: uppercase;
+    color: $white;
+    padding-right: px(20px, 'fhd');
+    box-sizing: border-box;
+
+    @include xxlarge {
+      font-size: px(16px, 'xxl');
+    }
+
+    @include xlarge {
+      font-size: px(16px, 'xl');
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .icon-arrow-down {
+    display: block;
+    width: px(8px, 'fhd');
+    height: px(8px, 'fhd');
+    border-top: 2px solid $yellow;
+    border-right: 2px solid $yellow;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-radius: 2px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform-origin: 50% 50%;
+    transform: rotate(-45deg) translate(0%, 0%);
+  }
+
+  .lang-menu {
+    display: none;
+    opacity: 0;
+    position: relative;
+    top: px(50px, 'fhd');
+    left: -15px;
+    padding: 30px 15px 15px;
+    border: 2px solid $white;
+    background-color: $yellow;
+    box-sizing: border-box;
+
+    animation-duration: .3s;
+    animation-name: langMenuClose;
+
+    &:before {
+      display: block;
+
+      position: absolute;
+      top: -20px;
+      left: 8px;
+      z-index: 1;
+ 
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      border-bottom: 20px solid $white;
+    }
+
+    &:after {
+      display: block;
+
+      position: absolute;
+      top: -16px;
+      left: 9px;
+      z-index: 2;
+ 
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid $yellow;
+    }
+
+    @at-root .header .widget-lang:hover .lang-menu {
+      display: block;
+      opacity: 1;
+      top: 30px;
+      left: -15px;
+      transition: top display opacity .3s;
+
+      animation-duration: .3s;
+      animation-name: langMenuOpen;
+    }
+  }
+
+  .item-link {
+    position: relative;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+
+    @include xxlarge {
+      font-size: px(16px, 'xxl');
+    }
+
+    @include xlarge {
+      font-size: px(16px, 'xl');
+    }
+
+    @include small {
+      font-size: px(16px, 'sm');
+    }
+  }
+}

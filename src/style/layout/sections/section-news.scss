@@ -1,0 +1,139 @@
+// SECTION NEWS
+// ---------------------------------------------------------- */
+
+.section-news {
+  padding-top: px(160px, 'fhd');
+  padding-bottom: px(80px, 'fhd');
+  box-sizing: border-box;
+
+  .section-header {
+    position: relative;
+  }
+
+  .section-title {
+    color: $yellow;
+    padding-left: px(223px, 'fhd');
+    margin-top: 0;
+    margin-bottom: px(46px, 'fhd');
+  }
+
+  .article-widget {
+    // margin-left: px(54px, 'fhd');
+    // margin-right: px(54px, 'fhd');
+    margin-left: px(44px, 'fhd');
+    margin-right: px(44px, 'fhd');
+    margin-bottom: 4px;
+
+    .article-image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .placeholder {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .article-content {
+      background: $white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+      padding: px(26px, 'fhd') px(26px, 'fhd') px(48px, 'fhd');
+      position: relative;
+    }
+
+    .article-title {
+      font-family: 'Roboto';
+      font-style: italic;
+      font-weight: 900;
+      font-size: px(24px, 'fhd');
+      line-height: px(34px, 'fhd');
+      text-transform: uppercase;
+      align: left;
+      vertical-align: top;
+
+      color: $black;
+
+      margin: 0 0 px(10px, 'fhd');
+      padding-right: px(70px, 'fhd');
+      width: px(336px, 'fhd');
+      height: px(68px, 'fhd');
+      overflow: hidden;
+    }
+
+    .article-excerpt {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: px(16px, 'fhd');
+      line-height: px(23px, 'fhd');
+
+      color: $black;
+      height: px(69px, 'fhd');
+      overflow: hidden;
+      margin-top: 0;
+      margin-bottom: px(30px, 'fhd');
+
+    }
+
+    .article-date {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: px(16px, 'fhd');
+      line-height: normal;
+
+      color: $black;
+
+      position: absolute;
+      top: px(23px, 'fhd');
+      right: px(20px, 'fhd');
+    }
+
+    .read-more {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 900;
+      font-size: px(24px, 'fhd');
+      line-height: px(28px, 'fhd');
+      text-decoration: none;
+      text-transform: uppercase;
+
+      color: $yellow;
+
+      display: block;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .button-next,
+  .button-prev {
+    display: block;
+    width: px(38px, 'fhd');
+    height: px(38px, 'fhd');
+    position: absolute;
+    top: 0%;
+    z-index: 100;
+  }
+
+  .button-next {
+    right: 14.65vw;
+    border-right: 1px solid $black;
+    border-bottom: 1px solid $black;
+
+    box-sizing: border-box;
+    transform: matrix(0.71, 0.71, 0.7, -0.71, 0, 0);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

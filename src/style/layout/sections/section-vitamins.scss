@@ -1,0 +1,106 @@
+// SECTION VITAMINS
+// ---------------------------------------------------------- */
+
+.section-vitamins {
+  min-height: 52vw;
+
+  .column {
+
+    &:first-child {
+      padding-top: px(132px, 'fhd');
+      padding-bottom: px(132px, 'fhd');
+      padding-left: px(230px, 'fhd');
+    }
+
+    &:last-child {
+     // padding-left: 2.5%;
+    }
+  }
+
+  .slogan {
+    width: px(324px, 'fhd');
+    color: $white;
+    line-height: px(75px, 'fhd');
+    margin-bottom: px(35px, 'fhd');
+  }
+
+  .elements-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-bottom: px(54px, 'fhd'); 
+
+    .list-item {
+      $item-width: 100%/3;
+      width: $item-width;
+      margin-bottom: px(12px, 'fhd'); 
+
+      // border: 1px dotted black;
+      box-sizing: border-box;
+    }
+
+    .element-symbol {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 900;
+      font-size: px(64px, 'fhd');
+      line-height: normal;
+
+      color: #E6FB48;
+    }
+    
+    .element-describe {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: px(16px, 'fhd');
+      line-height: normal;
+      text-transform: uppercase;
+
+      color: $white;
+    }
+  }
+
+  .slider {
+
+    .slide-image {
+      display: block;
+      width: 83%;
+      width: px(570px, 'fhd');
+      margin: 0 auto;
+      position: relative;
+      top: px(-20px, 'fhd');
+      left: px(-23px, 'fhd');
+
+      transform: rotate(-4.44deg);
+    }
+
+    .pagination {
+      text-align: center;
+      box-sizing: border-box;
+      position: relative;
+      top: px(-38px, 'fhd');
+      left: px(-4px, 'fhd');
+      z-index: 100;
+    }
+
+    .bullet {
+      display: inline-block;
+      width: px(24px, 'fhd');
+      height: px(24px, 'fhd');
+      border: 3px solid $yellow;
+      border-radius: 50%;
+      background-color: $white;
+      margin: px(10px, 'fhd');
+      outline: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.active {
+        background-color: $yellow;
+      }
+    }
+  }
+}

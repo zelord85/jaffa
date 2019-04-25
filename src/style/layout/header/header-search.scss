@@ -1,0 +1,17 @@
+.widget-search {
+  position: absolute;
+  top: px(24px, 'fhd');
+  left: px(114px, 'fhd');
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .search-icon {
+    display: block;
+    width: px(24px, 'fhd');
+    height: px(24px, 'fhd');
+    background-image: url('../images/theme/icons/search.svg');
+    background-size: cover;
+  }
+}

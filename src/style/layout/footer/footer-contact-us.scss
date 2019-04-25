@@ -1,0 +1,59 @@
+// FOOTER: contact us
+// -------------------------------------------------------- */
+
+.contact-us {
+  position: absolute;
+  top: 50%;
+  right: 1.3%;
+  transform: translateY(-50%);
+
+  .lead-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: px(16px, 'fhd');
+    line-height: normal;
+    text-transform: uppercase;
+
+    color: $black;
+
+    padding-right: px(38px, 'fhd');
+    display: table-cell;
+  }
+
+  .telegram-widget {
+    display: table-cell;
+  }
+
+  .telegram-link {
+    display: inline-block;
+    text-decoration: none;
+    padding-left: px(45px, 'fhd');
+    position: relative;
+  }
+
+  .icon--telegram {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: px(30px, 'fhd');
+    height: px(30px, 'fhd');
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: px(16px, 'fhd');
+    line-height: normal;
+    color: #C8C8C8;
+  }
+}

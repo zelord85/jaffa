@@ -1,0 +1,25 @@
+// FOOTER
+// ---------------------------------------------------------- */
+
+.footer {
+  position: relative;
+  border-top: px(60px, 'fhd') solid $yellow;
+  padding-top: px(20px, 'fhd');
+  padding-bottom: px(20px, 'fhd');
+
+  /* Footer: Logo
+  /* ---------------------------------------------------------- */
+  @import 'footer/footer-logo';
+
+  /* Footer: Menu
+  /* ---------------------------------------------------------- */
+  @import 'footer/footer-menu';
+
+  /* FOOTER: social
+  /* ---------------------------------------------------------- */
+  @import 'footer/footer-social';
+
+  /* FOOTER: contact us
+  /* ---------------------------------------------------------- */
+  @import 'footer/footer-contact-us';
+}

@@ -1,0 +1,22 @@
+body {
+  position: relative;
+}
+
+.app {
+  position: relative;
+  z-index: 100;
+}
+
+.background-layer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+
+  .shape {
+  	width: px(1920px, 'fhd');
+  	height: px(1913px, 'fhd');
+  }
+}

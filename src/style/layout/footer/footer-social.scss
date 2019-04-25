@@ -1,0 +1,40 @@
+// FOOTER: social
+// -------------------------------------------------------- */
+
+.social {
+  position: absolute;
+  top: 0;
+  right: px(70px, 'fhd');
+  width: px(50px, 'fhd');
+
+  .social-link {
+    display: block;
+    font-size: px(16px, 'fhd');
+  }
+
+  .social-icon {
+    display: flex;
+    width: px(50px, 'fhd');
+    height: px(50px, 'fhd');
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon--instagram {
+    width: px(27px, 'fhd');
+  }
+
+  .icon--facebook {
+    position: relative;
+    top: px(2px, 'fhd');
+    left: -4px;
+    width: px(18px, 'fhd');
+  }
+
+  .icon--twitter {
+    position: relative;
+    top: 0px;
+    left: px(2px, 'fhd');
+    width: px(33px, 'fhd');
+  }
+}

@@ -1,0 +1,45 @@
+//  Media Queries
+// ===============================================
+
+$extra-small: '(max-width: 320px)';
+$small:       '(max-width: 1024px)';
+$medium:      '(max-width: 1280px)';
+$large:       '(max-width: 1366px)';
+$xlarge:      '(max-width: 1440px)';
+$xxlarge:      '(max-width: 1680px)';
+
+@mixin extra-small {
+  @media screen and #{$extra-small} {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and #{$small} {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and #{$medium} {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and #{$large} {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media screen and #{$xlarge} {
+    @content;
+  }
+}
+
+@mixin xxlarge {
+  @media screen and #{$xlarge} {
+    @content;
+  }
+}

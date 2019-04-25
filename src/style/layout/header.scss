@@ -1,0 +1,31 @@
+.header {
+  position: absolute;
+  width: 100%;
+  min-height: px(160px, 'fhd');
+  box-sizing: border-box;
+  z-index: 100;
+
+  .top-panel {
+    width: 100%;
+    height: px(104px, 'fhd');
+    position: relative;
+    z-index: 100;
+  }
+
+  /* Header: Logo
+  /* ---------------------------------------------------------- */
+  @import 'header/header-logo';
+
+  /* Header: menu languages
+  /* ---------------------------------------------------------- */
+  @import 'header/header-languages';
+
+  /* Header: menu search
+  /* ---------------------------------------------------------- */
+  @import 'header/header-search';
+
+  /* Header: menu widget 
+  /* ---------------------------------------------------------- */
+  @import 'header/header-menu';
+
+}
